@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 
-const pages = ['About'];
+const pages = ['home' ,'about'];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -85,7 +85,7 @@ const Navbar = () => {
             {pages.map((page) => (
               <Button 
                 component={Link} 
-                to="/about"
+                to={`/${page === 'home'?'':page}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}

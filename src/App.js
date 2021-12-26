@@ -1,5 +1,7 @@
 import Navbar from "./component/Navbar";
-import About from "./component/About";
+import About from "./component/home/About";
+import Home from "./component/home/Home";
+import Sort from "./component/sort/Sort";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,6 +18,12 @@ function App() {
         <Switch>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/sort">
+            <Sort />
+          </Route>
+          <Route exact path="/">
+            <Home />
           </Route>
         </Switch>
     </Router>    
