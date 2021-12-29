@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Slider from './Slider'
 
-export default function Nav() {
+export default function Nav(props) {
 
     const [algoSelect, setAlgoSelect] = useState('bubble sort');
 
@@ -21,7 +21,7 @@ export default function Nav() {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <label htmlFor="arraySize" className="form-label">Array Size</label>
-                        <Slider />
+                        <Slider arraySize={props.arraySize} handleArraySize={props.handleArraySize}  />
                     </div>
                 </div>
                 <select className="form-select d-flex form-select-lg" value={algoSelect} onChange={handleAlgoSelector} style={{ width: '14%' }}>
@@ -29,7 +29,7 @@ export default function Nav() {
                     <option value="quick sort">Quick Sort</option>
                     <option value="merge sort">Merge Sort</option>
                 </select>
-                <button type="button" class="btn btn-warning d-flex mx-2">Visulaize</button>
+                <button type="button" className="btn btn-warning d-flex mx-2">Visulaize</button>
             </div>
         </nav>  
         </>

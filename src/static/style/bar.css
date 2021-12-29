@@ -1,0 +1,24 @@
+.array-container {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+.array-bar {
+    width: 10px;
+    background-color: turquoise;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+#random-button {
+    line-height: 26px;
+    width: 82px;
+    font-size: 8pt;
+    font-family: tahoma;
+    margin-top: 135px;
+    margin-right: 62px;
+    position: absolute;
+    top: 6px;
+    right: -40px;
+}
