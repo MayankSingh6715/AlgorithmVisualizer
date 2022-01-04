@@ -11,7 +11,7 @@ export default function Menu() {
 
     useEffect(() => {
         resetArray();
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const resetArray = () => {
         const tempArray = [];

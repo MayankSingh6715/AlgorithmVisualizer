@@ -5,8 +5,7 @@ import Sort from "./component/sort/Sort";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
