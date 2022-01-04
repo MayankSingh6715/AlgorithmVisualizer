@@ -1,9 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
+import { useEffect } from 'react';
 import '../../static/style/bar.css';
 
 
 export default function Visualizer(props) {
+    
+    const [initialrray, setArray] = useState([]);
+    
+    useEffect(() => {
+        initializeArrayBars();
+    }, []);
+    
+    const initializeArrayBars = () => {
+        return props.resetArray;
+    }
     
     return (
         <>
