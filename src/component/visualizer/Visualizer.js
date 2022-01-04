@@ -6,12 +6,12 @@ import '../../static/style/bar.css';
 export default function Visualizer(props) {
     
     useEffect(() => {
-        const initializeArrayBars = () => {
-            return props.resetArray;
-        }
         initializeArrayBars();
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
     
+    const initializeArrayBars = () => {
+        return props.resetArray;
+    }
     
     return (
         <>
