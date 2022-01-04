@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Visualizer from '../visualizer/Visualizer';
 import Nav from './Nav';
 
@@ -9,17 +9,18 @@ export default function Menu() {
 
     const [array, setArray] = useState([]);
 
-    useEffect(() => {
-        resetArray();
-    }, [resetArray]); // eslint-disable-line react-hooks/exhaustive-deps
-
-    const resetArray = () => {
+    const resetArray = useCallback(() => {
         const tempArray = [];
         for(let i = 0; i < arraySize; i++) {
             tempArray.push(Math.floor(Math.random() * (250 - 20) + 20));
         }     
         setArray(tempArray);
-    }
+    }, []); 
+
+    useEffect(() => {
+        resetArray();
+    }, []);
+
 
     const handleArraySize = (value) => {
         setArraySize(value);
