@@ -15,7 +15,7 @@ export default function Menu() {
             tempArray.push(Math.floor(Math.random() * (250 - 20) + 20));
         }     
         setArray(tempArray);
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [arraySize]); // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         resetArray();
