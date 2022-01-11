@@ -13,15 +13,16 @@ function App() {
   return (
     <>
     <Router>
-      <Navbar />
         <Switch>
           <Route path="/about">
+            <Navbar />
             <About />
           </Route>
           <Route path="/sort">
             <Sort />
           </Route>
           <Route path="/">
+            <Navbar />
             <Home />
           </Route>
         </Switch>
